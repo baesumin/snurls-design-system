@@ -1,0 +1,148 @@
+export declare const color: {
+    black: string;
+    white: string;
+};
+export declare const whiteAlpha: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const blackAlpha: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const gray: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const red: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const orange: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const yellow: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const green: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const teal: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const blue: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const cyan: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const purple: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
+export declare const pink: {
+    900: string;
+    800: string;
+    700: string;
+    600: string;
+    500: string;
+    400: string;
+    300: string;
+    200: string;
+    100: string;
+    50: string;
+};
