@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+
+# log files
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# typescript
+*.tsbuildinfo
+
+# 환경변수
+.env
+**/.env
+
+# lock files
+package-lock.json
+yarn.lock
+.pnp.*
+pnpm-lock.yaml
+
+# node modules
+**/node_modules/
+
+# build output
+dist
+**/dist/
+build
+**/build
+
+# storybook build
+storybook-static
+**/storybook-static/
+
+# next.js
+.next
+**/.next/
+out
+**/out/
+
+# misc
+*.local
