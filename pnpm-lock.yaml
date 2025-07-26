@@ -97,11 +97,17 @@ importers:
         specifier: ^7.0.4
         version: 7.0.6(@types/node@24.1.0)
 
-  packages/themes:
-    devDependencies:
+  packages/esbuild-config:
+    dependencies:
       esbuild:
         specifier: ^0.25.8
         version: 0.25.8
+
+  packages/themes:
+    devDependencies:
+      '@snurls/esbuild-config':
+        specifier: workspace:*
+        version: link:../esbuild-config
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
