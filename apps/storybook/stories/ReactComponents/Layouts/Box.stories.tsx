@@ -14,14 +14,23 @@ export default meta;
 
 type Story = StoryObj<BoxProps>;
 
-export const BoxStory: Story = {
+// export const BoxStory: Story = {
+//   args: {
+//     as: "button",
+//     style: {
+//       borderRadius: "md",
+//       boxShadow: "xl",
+//       padding: 5,
+//       background: "pink",
+//     },
+//   },
+// };
+export const BoxStory = {
   args: {
     as: "button",
-    style: {
-      borderRadius: "md",
-      boxShadow: "xl",
-      padding: 5,
-      background: "pink",
-    },
+    padding: "5",
+    background: "pink",
+    boxShadow: "xl",
+    borderRadius: "md",
   },
 };
