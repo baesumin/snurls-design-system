@@ -1,5 +1,4 @@
 import "@snurls/react/style.css";
-import React from "react";
 import { Divider, Box } from "@snurls/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { vars } from "@snurls/themes";

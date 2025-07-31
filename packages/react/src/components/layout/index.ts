@@ -1,4 +1,5 @@
 export { default as Box } from "./Box";
 export { default as Divider } from "./Divider";
+export { default as Flex } from "./Flex";
 
-export { BoxProps, DividerProps } from "./types";
+export { BoxProps, DividerProps, FlexProps } from "./types";
