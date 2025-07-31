@@ -1,7 +1,7 @@
 import { vars } from "@snurls/themes";
 import { AsElementProps, StyleProps } from "../core/types";
 import { CSSProperties } from "@vanilla-extract/css";
-// import { TextProps } from "../typography";
+import { TextProps } from "../typography";
 
 export type BoxProps = AsElementProps & StyleProps;
 
@@ -53,7 +53,7 @@ export type ListProps = {
 } & BoxProps;
 
 export type OrderListProps = Omit<ListProps, "variant">;
-// export type ListItemProps = TextProps;
+export type ListItemProps = TextProps;
 
 export type UnorderedListProps = Omit<ListProps, "variant"> & {
   listStyleType?: CSSProperties["listStyleType"];
