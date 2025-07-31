@@ -1,23 +1,25 @@
-import { ReactElement, Ref, createElement } from "react";
-import { clsx } from "clsx";
+import { createElement, ReactElement, Ref } from "react";
+import { TextProps } from "./types";
 import { BaseStyle, StyleSprinkles } from "../core/styles.css";
+import { clsx } from "clsx";
 import { extractSprinkleProps } from "../utils/properties";
-import { BoxProps } from "./types";
 import { vars } from "@snurls/themes";
+import { textStyle } from "./style.css";
 
-interface Props extends BoxProps {
+interface Props extends TextProps {
   ref?: Ref<HTMLElement>;
 }
 
-const Box = (props: Props): ReactElement => {
+const Text = (props: Props): ReactElement => {
   const {
-    as = "div",
+    as = "p",
     color,
     background,
     ref,
     className,
     style,
     children,
+    fontSize,
   } = props;
 
   return createElement(
@@ -30,6 +32,9 @@ const Box = (props: Props): ReactElement => {
         StyleSprinkles(
           extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
         ),
+        textStyle({
+          fontSize,
+        }),
         className,
       ]),
       style: {
@@ -42,4 +47,4 @@ const Box = (props: Props): ReactElement => {
   );
 };
 
-export default Box;
+export default Text;

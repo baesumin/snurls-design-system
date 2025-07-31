@@ -1,3 +1,4 @@
+import "@snurls/react/style.css";
 import { Box, BoxProps } from "@snurls/react";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -14,21 +15,10 @@ export default meta;
 
 type Story = StoryObj<BoxProps>;
 
-// export const BoxStory: Story = {
-//   args: {
-//     as: "button",
-//     style: {
-//       borderRadius: "md",
-//       boxShadow: "xl",
-//       padding: 5,
-//       background: "pink",
-//     },
-//   },
-// };
-export const BoxStory = {
+export const BoxStory: Story = {
   args: {
     as: "button",
-    padding: "5",
+    padding: 5,
     background: "pink",
     boxShadow: "xl",
     borderRadius: "md",
