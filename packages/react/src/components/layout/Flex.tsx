@@ -38,7 +38,7 @@ const Flex = (props: Props): ReactElement => {
         StyleSprinkles(
           extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
         ),
-        props.className,
+        className,
       ]),
       style: {
         display: "flex",
@@ -52,7 +52,7 @@ const Flex = (props: Props): ReactElement => {
         gap,
         color: color && vars.colors.$scale?.[color]?.[700],
         background: background && vars.colors.$scale?.[background]?.[100],
-        ...props.style,
+        ...style,
       },
     },
     children,

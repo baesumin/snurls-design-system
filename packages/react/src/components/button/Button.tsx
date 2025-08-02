@@ -10,13 +10,14 @@ import {
   spinnerStyle,
 } from "./style.css";
 import { vars } from "@snurls/themes";
+import { useButton } from "../../hooks/button";
 
 interface Props extends ButtonProps {
   ref: React.Ref<HTMLButtonElement>;
 }
 
 const Button = (props: Props) => {
-  //   const { buttonProps, } = useButton(props);
+  const { buttonProps } = useButton(props);
   const {
     variant = "solid",
     size = "md",
@@ -24,7 +25,6 @@ const Button = (props: Props) => {
     leftIcon,
     rightIcon,
     isLoading,
-    isDisabled,
     children,
     style,
     ref,
@@ -42,10 +42,8 @@ const Button = (props: Props) => {
 
   return (
     <button
-      //   {...buttonProps}
-      // 기능 ^
+      {...buttonProps}
       ref={ref}
-      disabled={isDisabled}
       className={clsx([
         buttonStyle({
           size,
