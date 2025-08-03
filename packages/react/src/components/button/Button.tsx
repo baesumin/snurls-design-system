@@ -13,7 +13,7 @@ import { vars } from "@snurls/themes";
 import { useButton } from "../../hooks/button";
 
 interface Props extends ButtonProps {
-  ref: React.Ref<HTMLButtonElement>;
+  ref?: React.Ref<HTMLButtonElement>;
 }
 
 const Button = (props: Props) => {

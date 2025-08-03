@@ -1,5 +1,11 @@
 import "@snurls/react/style.css";
-import { Button, ButtonProps, Text, useButton } from "@snurls/react";
+import {
+  Button,
+  ButtonProps,
+  Text,
+  useButton,
+  useToggleButton,
+} from "@snurls/react";
 import { Meta, StoryObj } from "@storybook/react";
 import { vars } from "@snurls/themes";
 
@@ -67,18 +73,21 @@ export const TextButtonStory: Story = {
   },
 };
 
-// export const ToggleButtonStory: Story  = {
-//   render: () => {
-//     const { buttonProps, isSelected } = useToggleButton({ elementType: 'button' }, false);
+export const ToggleButtonStory: Story = {
+  render: () => {
+    const { buttonProps, isSelected } = useToggleButton(
+      { elementType: "button" },
+      false,
+    );
 
-//     return (
-//       <_Button
-//         {...buttonProps}
-//         variant={isSelected ? "solid" : "outline"}
-//         color="green"
-//       >
-//         {isSelected ? "😀" : "😂"}
-//       </_Button>
-//     );
-//   },
-// };
+    return (
+      <Button
+        {...buttonProps}
+        variant={isSelected ? "solid" : "outline"}
+        color="green"
+      >
+        {isSelected ? "😀" : "😂"}
+      </Button>
+    );
+  },
+};
