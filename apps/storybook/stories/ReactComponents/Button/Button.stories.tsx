@@ -37,13 +37,20 @@ export default meta;
 type Story = StoryObj<ButtonProps>;
 
 export const ButtonStory: Story = {
-  args: {
-    size: "lg",
-    children: "Button",
-    variant: "outline",
-    isDisabled: false,
-    isLoading: false,
-    leftIcon: "😀",
+  render: () => {
+    return (
+      <div style={{ width: 335 }}>
+        <Button
+          size="lg"
+          variant="solid"
+          isDisabled={false}
+          isLoading={false}
+          leftIcon="😀"
+        >
+          Button
+        </Button>
+      </div>
+    );
   },
 };
 

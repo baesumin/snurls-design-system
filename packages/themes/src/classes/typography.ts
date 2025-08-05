@@ -1,97 +1,88 @@
 import { typography } from "../variables";
-
-export const heading = {
-  "4xl": {
-    fontSize: typography.fontSize[60],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[100],
-  },
-  "3xl": {
-    fontSize: typography.fontSize[48],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[100],
-  },
-  "2xl": {
-    fontSize: typography.fontSize[36],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[120],
-  },
-  xl: {
-    fontSize: typography.fontSize[30],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[133],
-  },
-  lg: {
-    fontSize: typography.fontSize[24],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[133],
-  },
-  md: {
-    fontSize: typography.fontSize[20],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[120],
-  },
-  sm: {
-    fontSize: typography.fontSize[16],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[120],
-  },
-  xs: {
-    fontSize: typography.fontSize[14],
-    fontWeight: typography.fontWeight[700],
-    lineHeight: typography.lineHeight[120],
-  },
-};
-
 export const text = {
-  "6xl": {
-    fontSize: typography.fontSize[60],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+  display1: {
+    fontSize: typography.fontSize[56],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[67],
   },
-  "5xl": {
-    fontSize: typography.fontSize[48],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+  display2: {
+    fontSize: typography.fontSize[40],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[56],
   },
-  "4xl": {
+  title1: {
     fontSize: typography.fontSize[36],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[45],
   },
-  "3xl": {
-    fontSize: typography.fontSize[30],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+  title2: {
+    fontSize: typography.fontSize[28],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[35],
   },
-  "2xl": {
+  title3: {
     fontSize: typography.fontSize[24],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[32],
   },
-  xl: {
+  heading1: {
+    fontSize: typography.fontSize[22],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[30],
+  },
+  heading2: {
     fontSize: typography.fontSize[20],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[800],
+    lineHeight: typography.lineHeight[28],
   },
-  lg: {
+  headline1: {
     fontSize: typography.fontSize[18],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[700],
+    lineHeight: typography.lineHeight[25],
   },
-  md: {
+  headline2: {
+    fontSize: typography.fontSize[17],
+    fontWeight: typography.fontWeight[700],
+    lineHeight: typography.lineHeight[23],
+  },
+  body1: {
     fontSize: typography.fontSize[16],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[600],
+    lineHeight: typography.lineHeight[23],
   },
-  sm: {
+  body1Reading: {
+    fontSize: typography.fontSize[16],
+    fontWeight: typography.fontWeight[500],
+    lineHeight: typography.lineHeight[26],
+  },
+  body2: {
+    fontSize: typography.fontSize[15],
+    fontWeight: typography.fontWeight[600],
+    lineHeight: typography.lineHeight[22],
+  },
+  body2Reading: {
+    fontSize: typography.fontSize[15],
+    fontWeight: typography.fontWeight[500],
+    lineHeight: typography.lineHeight[25],
+  },
+  label1: {
     fontSize: typography.fontSize[14],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[600],
+    lineHeight: typography.lineHeight[21],
   },
-  xs: {
+  label2: {
+    fontSize: typography.fontSize[13],
+    fontWeight: typography.fontWeight[600],
+    lineHeight: typography.lineHeight[20],
+  },
+  caption1: {
     fontSize: typography.fontSize[12],
-    fontWeight: typography.fontWeight[400],
-    lineHeight: typography.lineHeight[150],
+    fontWeight: typography.fontWeight[600],
+    lineHeight: typography.lineHeight[18],
+  },
+  caption2: {
+    fontSize: typography.fontSize[11],
+    fontWeight: typography.fontWeight[600],
+    lineHeight: typography.lineHeight[16],
   },
 };

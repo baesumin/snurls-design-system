@@ -15,7 +15,7 @@ const meta: Meta<TextProps> = {
       options: ["p", "span", "div", "b", "i", "u", "strong", "em"],
       control: "select",
     },
-    fontSize: {
+    variant: {
       options: Object.keys(classes.typography.text),
       control: "select",
     },
@@ -34,8 +34,7 @@ export const TextStory: Story = {
   args: {
     as: "p",
     children: "Hello World",
-    fontSize: "xl",
+    variant: "body1",
     color: "gray",
-    background: "blue",
   },
 };

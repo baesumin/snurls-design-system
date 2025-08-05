@@ -19,7 +19,7 @@ const Text = (props: Props): ReactElement => {
     className,
     style,
     children,
-    fontSize,
+    variant,
   } = props;
 
   return createElement(
@@ -33,13 +33,13 @@ const Text = (props: Props): ReactElement => {
           extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
         ),
         textStyle({
-          fontSize,
+          variant,
         }),
         className,
       ]),
       style: {
-        color: color && vars.colors.$scale?.[color]?.[700],
-        background: background && vars.colors.$scale?.[background]?.[100],
+        color: color && vars.colors.$scale?.["gray"]?.[800],
+        background,
         ...style,
       },
     },

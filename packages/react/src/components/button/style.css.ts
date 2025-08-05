@@ -5,6 +5,7 @@ import { classes, vars } from "@snurls/themes";
 export const enableColorVariant = createVar(); // 500
 export const hoverColorVariant = createVar(); // 600 outline 50 ghost 50
 export const activeColorVariant = createVar(); // 700 outline 100 ghost 100
+export const borderColorVariant = createVar(); // 700 outline 100 ghost 100
 
 export const buttonStyle = recipe({
   base: {
@@ -12,9 +13,10 @@ export const buttonStyle = recipe({
     padding: 0,
     border: 0,
     background: "none",
-
-    borderRadius: vars.box.radii.md,
+    width: "100%",
+    borderRadius: vars.box.radii.lg,
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
     userSelect: "none",
@@ -38,28 +40,28 @@ export const buttonStyle = recipe({
   variants: {
     size: {
       xs: {
-        ...classes.typography.text.xs,
+        // ...classes.typography.text.xs,
         fontWeight: vars.typography.fontWeight[600],
         padding: "0 0.5rem",
         gap: "0.5rem",
         height: "1.5rem",
       },
       sm: {
-        ...classes.typography.text.sm,
+        // ...classes.typography.text.sm,
         fontWeight: vars.typography.fontWeight[600],
         padding: "0 0.75rem",
         gap: "0.5rem ",
         height: "2rem",
       },
       md: {
-        ...classes.typography.text.md,
+        // ...classes.typography.text.md,
         fontWeight: vars.typography.fontWeight[600],
         padding: "0 1rem",
         gap: "0.5rem",
         height: "2.5rem",
       },
       lg: {
-        ...classes.typography.text.lg,
+        // ...classes.typography.text.lg,
         fontWeight: vars.typography.fontWeight[600],
         padding: "0 1.5rem",
         gap: "0.5rem",
@@ -79,8 +81,8 @@ export const buttonStyle = recipe({
         },
       },
       outline: {
-        border: `1px solid ${enableColorVariant}`,
-        color: enableColorVariant,
+        border: `1px solid ${borderColorVariant}`,
+        color: vars.colors.$scale.gray[800],
 
         "&:hover:not([disabled])": {
           backgroundColor: hoverColorVariant,
@@ -111,19 +113,19 @@ export const spanStyle = recipe({
   variants: {
     size: {
       xs: {
-        ...classes.typography.text.xs,
+        // ...classes.typography.text.xs,
         fontWeight: vars.typography.fontWeight[600],
       },
       sm: {
-        ...classes.typography.text.sm,
+        // ...classes.typography.text.sm,
         fontWeight: vars.typography.fontWeight[600],
       },
       md: {
-        ...classes.typography.text.md,
+        // ...classes.typography.text.md,
         fontWeight: vars.typography.fontWeight[600],
       },
       lg: {
-        ...classes.typography.text.lg,
+        // ...classes.typography.text.lg,
         fontWeight: vars.typography.fontWeight[600],
       },
     },

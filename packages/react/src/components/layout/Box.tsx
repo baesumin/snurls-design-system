@@ -33,8 +33,8 @@ const Box = (props: Props): ReactElement => {
         className,
       ]),
       style: {
-        color: color && vars.colors.$scale?.[color]?.[700],
-        background: background && vars.colors.$scale?.[background]?.[100],
+        color: color && vars.colors.$scale?.["gray"]?.[800],
+        background,
         ...style,
       },
     },

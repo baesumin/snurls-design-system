@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import {
   activeColorVariant,
+  borderColorVariant,
   buttonStyle,
   enableColorVariant,
   hoverColorVariant,
@@ -21,7 +22,7 @@ const Button = (props: Props) => {
   const {
     variant = "solid",
     size = "md",
-    color = "gray",
+    color = "primary",
     leftIcon,
     rightIcon,
     isLoading,
@@ -30,15 +31,20 @@ const Button = (props: Props) => {
     ref,
   } = props;
 
-  const endableColor = vars.colors.$scale[color][500];
+  const enableColor =
+    variant === "solid"
+      ? vars.colors.$scale["primary"][400]
+      : vars.colors.$scale["gray"][50];
   const hoverColor =
     variant === "solid"
-      ? vars.colors.$scale[color][600]
-      : vars.colors.$scale[color][50];
+      ? vars.colors.$scale["primary"][300]
+      : vars.colors.$scale["gray"][100];
   const activeColor =
     variant === "solid"
-      ? vars.colors.$scale[color][700]
-      : vars.colors.$scale[color][100];
+      ? vars.colors.$scale["primary"][500]
+      : vars.colors.$scale["gray"][500];
+  const borderColor =
+    variant === "outline" ? vars.colors.$scale["gray"][400] : "";
 
   return (
     <button
@@ -52,9 +58,10 @@ const Button = (props: Props) => {
       ])}
       style={{
         ...assignInlineVars({
-          [enableColorVariant]: endableColor,
+          [enableColorVariant]: enableColor,
           [hoverColorVariant]: hoverColor,
           [activeColorVariant]: activeColor,
+          [borderColorVariant]: borderColor,
         }),
         ...style,
       }}
