@@ -9,6 +9,7 @@ export const borderColorVariant = createVar(); // 700 outline 100 ghost 100
 
 export const buttonStyle = recipe({
   base: {
+    position: "relative",
     margin: 0,
     padding: 0,
     border: 0,
@@ -23,7 +24,8 @@ export const buttonStyle = recipe({
     transition: "background-color 0.2s, color 0.2s, border-color 0.2s",
     // @ts-ignore
     "&[disabled]": {
-      opacity: 0.4,
+      background: vars.colors.$scale.gray[300],
+      color: vars.colors.$scale.gray[500],
       cursor: "not-allowed",
     },
     '&[data-loading="true"]': {
@@ -39,37 +41,19 @@ export const buttonStyle = recipe({
   },
   variants: {
     size: {
-      xs: {
-        // ...classes.typography.text.xs,
-        fontWeight: vars.typography.fontWeight[600],
-        padding: "0 0.5rem",
-        gap: "0.5rem",
-        height: "1.5rem",
+      "56": {
+        height: "3.5rem",
       },
-      sm: {
-        // ...classes.typography.text.sm,
-        fontWeight: vars.typography.fontWeight[600],
-        padding: "0 0.75rem",
-        gap: "0.5rem ",
-        height: "2rem",
-      },
-      md: {
-        // ...classes.typography.text.md,
-        fontWeight: vars.typography.fontWeight[600],
-        padding: "0 1rem",
-        gap: "0.5rem",
-        height: "2.5rem",
-      },
-      lg: {
-        // ...classes.typography.text.lg,
-        fontWeight: vars.typography.fontWeight[600],
-        padding: "0 1.5rem",
-        gap: "0.5rem",
+      "48": {
         height: "3rem",
+      },
+      "40": {
+        height: "2.5rem",
       },
     },
     variant: {
       solid: {
+        ...classes.typography.text.headline2,
         backgroundColor: enableColorVariant,
         color: vars.colors.$scale.gray[50],
 
@@ -81,6 +65,7 @@ export const buttonStyle = recipe({
         },
       },
       outline: {
+        ...classes.typography.text.headline2,
         border: `1px solid ${borderColorVariant}`,
         color: vars.colors.$scale.gray[800],
 
@@ -92,13 +77,18 @@ export const buttonStyle = recipe({
         },
       },
       ghost: {
-        color: enableColorVariant,
+        color: vars.colors.$scale.info[200],
 
         "&:hover:not([disabled])": {
           backgroundColor: hoverColorVariant,
         },
         "&:active:not([disabled])": {
-          backgroundColor: activeColorVariant,
+          backgroundColor: vars.colors.$scale.gray[200],
+        },
+        "&[disabled]": {
+          background: vars.colors.$static.light.color.white,
+          color: vars.colors.$scale.gray[400],
+          cursor: "not-allowed",
         },
       },
     },
@@ -112,21 +102,14 @@ export const spanStyle = recipe({
   },
   variants: {
     size: {
-      xs: {
-        // ...classes.typography.text.xs,
-        fontWeight: vars.typography.fontWeight[600],
+      "56": {
+        // ...classes.typography.text.headline2,
       },
-      sm: {
-        // ...classes.typography.text.sm,
-        fontWeight: vars.typography.fontWeight[600],
+      "48": {
+        // ...classes.typography.text.headline2,
       },
-      md: {
-        // ...classes.typography.text.md,
-        fontWeight: vars.typography.fontWeight[600],
-      },
-      lg: {
-        // ...classes.typography.text.lg,
-        fontWeight: vars.typography.fontWeight[600],
+      "40": {
+        // ...classes.typography.text.headline2,
       },
     },
   },
@@ -150,25 +133,20 @@ export const spinnerStyle = recipe({
   },
   variants: {
     size: {
-      xs: {
+      "56": {
         width: vars.typography.fontSize[12],
         height: vars.typography.fontSize[12],
         left: `calc(50% - ${vars.typography.fontSize[12]}/2)`,
       },
-      sm: {
-        width: vars.typography.fontSize[14],
-        height: vars.typography.fontSize[14],
-        left: `calc(50% - ${vars.typography.fontSize[14]}/2)`,
+      "48": {
+        width: vars.typography.fontSize[12],
+        height: vars.typography.fontSize[12],
+        left: `calc(50% - ${vars.typography.fontSize[12]}/2)`,
       },
-      md: {
-        width: vars.typography.fontSize[16],
-        height: vars.typography.fontSize[16],
-        left: `calc(50% - ${vars.typography.fontSize[16]}/2)`,
-      },
-      lg: {
-        width: vars.typography.fontSize[18],
-        height: vars.typography.fontSize[18],
-        left: `calc(50% - ${vars.typography.fontSize[18]}/2)`,
+      "40": {
+        width: vars.typography.fontSize[12],
+        height: vars.typography.fontSize[12],
+        left: `calc(50% - ${vars.typography.fontSize[12]}/2)`,
       },
     },
   },

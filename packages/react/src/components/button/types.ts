@@ -6,6 +6,7 @@ export type ButtonProps = {
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-  size?: "xs" | "sm" | "md" | "lg";
+  width?: number;
+  size?: "56" | "48" | "40";
   variant?: "solid" | "outline" | "ghost";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;

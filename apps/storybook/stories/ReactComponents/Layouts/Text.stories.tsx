@@ -20,8 +20,7 @@ const meta: Meta<TextProps> = {
       control: "select",
     },
     color: {
-      options: Object.keys(vars.colors.$scale),
-      control: "select",
+      control: "color",
     },
   },
 };
@@ -33,8 +32,7 @@ type Story = StoryObj<TextProps>;
 export const TextStory: Story = {
   args: {
     as: "p",
-    children: "Hello World",
+    children: "반복되는 노력 기울이다",
     variant: "body1",
-    color: "gray",
   },
 };

@@ -1,5 +1,4 @@
 import { ButtonProps } from "./types";
-import { clsx } from "clsx";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import {
   activeColorVariant,
@@ -21,8 +20,9 @@ const Button = (props: Props) => {
   const { buttonProps } = useButton(props);
   const {
     variant = "solid",
-    size = "md",
-    color = "primary",
+    size = "56",
+    color = "",
+    width,
     leftIcon,
     rightIcon,
     isLoading,
@@ -31,10 +31,7 @@ const Button = (props: Props) => {
     ref,
   } = props;
 
-  const enableColor =
-    variant === "solid"
-      ? vars.colors.$scale["primary"][400]
-      : vars.colors.$scale["gray"][50];
+  const enableColor = vars.colors.$scale["primary"][400];
   const hoverColor =
     variant === "solid"
       ? vars.colors.$scale["primary"][300]
@@ -50,12 +47,10 @@ const Button = (props: Props) => {
     <button
       {...buttonProps}
       ref={ref}
-      className={clsx([
-        buttonStyle({
-          size,
-          variant,
-        }),
-      ])}
+      className={buttonStyle({
+        size,
+        variant,
+      })}
       style={{
         ...assignInlineVars({
           [enableColorVariant]: enableColor,
@@ -63,6 +58,8 @@ const Button = (props: Props) => {
           [activeColorVariant]: activeColor,
           [borderColorVariant]: borderColor,
         }),
+        background: color,
+        width,
         ...style,
       }}
     >
