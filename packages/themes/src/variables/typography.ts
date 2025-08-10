@@ -40,3 +40,7 @@ export const lineHeight = {
   18: "113%",
   16: "100%",
 };
+
+export const fontFamily = {
+  suit: "SUIT, sans-serif",
+} as const;

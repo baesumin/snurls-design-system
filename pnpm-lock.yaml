@@ -53,6 +53,9 @@ importers:
 
   apps/example-app:
     dependencies:
+      '@snurls/react':
+        specifier: workspace:*
+        version: link:../../packages/react
       '@snurls/themes':
         specifier: workspace:*
         version: link:../../packages/themes
