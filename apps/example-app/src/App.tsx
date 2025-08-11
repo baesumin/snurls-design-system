@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Text></Text>
+      <Text variant="body1">안녕</Text>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
