@@ -6,7 +6,9 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "build:storybook": "turbo build-storybook"
+    "build:storybook": "turbo build-storybook",
+    "release:react": "pnpm version patch --filter @snurls/react && pnpm publish --filter @snurls/react",
+    "release:themes": "pnpm version patch --filter @snurls/themes && pnpm publish --filter @snurls/themes"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.38.0",

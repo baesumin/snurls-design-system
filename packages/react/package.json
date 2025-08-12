@@ -11,6 +11,12 @@
     },
     "./style.css": "./dist/index.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baesumin/snurls-design-system.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/baesumin/snurls-design-system/tree/main/packages/react",
   "publishConfig": {
     "access": "public"
   },
