@@ -1,4 +1,3 @@
-import "@snurls/themes/themes.css";
 import "@snurls/react/style.css";
 
 import { StrictMode } from "react";

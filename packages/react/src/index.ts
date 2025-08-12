@@ -1,3 +1,4 @@
+import "@snurls/themes/themes.css";
 export * from "./components/layout";
 export * from "./components/button";
 export * from "./components/typography";

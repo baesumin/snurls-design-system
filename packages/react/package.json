@@ -11,12 +11,19 @@
     },
     "./style.css": "./dist/index.css"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "pnpm clean && pnpm build:js && pnpm build:type",
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
     "clean": "rm -rf dist",
-    "dev": "pnpm build:js --watch && pnpm build:type --watch"
+    "dev": "pnpm build:js --watch && pnpm build:type --watch",
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@snurls/esbuild-config": "workspace:*",
