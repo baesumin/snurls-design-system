@@ -11,6 +11,12 @@
     },
     "./themes.css": "./dist/themes.css"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "pnpm clean && pnpm build:js && pnpm build:type && pnpm build:css",
     "build:js": "node build.js",
