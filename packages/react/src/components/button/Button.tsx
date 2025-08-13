@@ -39,7 +39,7 @@ const Button = (props: Props) => {
   const activeColor =
     variant === "solid"
       ? vars.colors.$scale["primary"][500]
-      : vars.colors.$scale["gray"][500];
+      : vars.colors.$scale["gray"][200];
   const borderColor =
     variant === "outline" ? vars.colors.$scale["gray"][400] : "";
 

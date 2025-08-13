@@ -10,15 +10,15 @@ export const borderColorVariant = createVar(); // 700 outline 100 ghost 100
 export const buttonStyle = recipe({
   base: {
     position: "relative",
-    margin: 0,
-    padding: 0,
-    border: 0,
-    background: "none",
-    width: "100%",
-    borderRadius: vars.box.radii.lg,
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    textOverflow: "ellipsis",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    border: 0,
+    borderRadius: vars.box.radii.lg,
+    gap: 4,
     cursor: "pointer",
     userSelect: "none",
     transition: "background-color 0.2s, color 0.2s, border-color 0.2s",
@@ -32,6 +32,7 @@ export const buttonStyle = recipe({
       "& span": {
         opacity: 0,
       },
+      textOverflow: "clip",
     },
     "&:focus-visible": {
       outline: "none",
@@ -43,12 +44,15 @@ export const buttonStyle = recipe({
     size: {
       "56": {
         height: "3.5rem",
+        padding: "16px 24px",
       },
       "48": {
         height: "3rem",
+        padding: "12px 20px",
       },
       "40": {
         height: "2.5rem",
+        padding: "12px 10px",
       },
     },
     variant: {
@@ -78,6 +82,7 @@ export const buttonStyle = recipe({
       },
       ghost: {
         color: vars.colors.$scale.info[200],
+        background: vars.colors.$static.light.color.white,
 
         "&:hover:not([disabled])": {
           backgroundColor: hoverColorVariant,

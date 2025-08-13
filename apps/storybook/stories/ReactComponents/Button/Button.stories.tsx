@@ -51,6 +51,8 @@ export const ButtonStory: Story = {
     variant: "solid",
     isDisabled: false,
     isLoading: false,
+    leftIcon: "",
+    rightIcon: "",
   },
 };
 
@@ -71,6 +73,5 @@ export const ButtonGoastStory: Story = {
     variant: "ghost",
     isDisabled: false,
     isLoading: false,
-    width: 82,
   },
 };
