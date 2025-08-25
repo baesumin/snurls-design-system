@@ -3,7 +3,6 @@ import { TextProps } from "./types";
 import { BaseStyle, StyleSprinkles } from "../core/styles.css";
 import { clsx } from "clsx";
 import { extractSprinkleProps } from "../utils/properties";
-import { vars } from "@snurls/themes";
 import { textStyle } from "./style.css";
 
 interface Props extends TextProps {
@@ -12,14 +11,14 @@ interface Props extends TextProps {
 
 const Text = (props: Props): ReactElement => {
   const {
-    as = "p",
+    as = "span",
     color,
     background,
     ref,
     className,
     style,
     children,
-    variant,
+    variant = "body1",
   } = props;
 
   return createElement(
@@ -38,7 +37,7 @@ const Text = (props: Props): ReactElement => {
         className,
       ]),
       style: {
-        color: color ?? vars.colors.$scale?.["gray"]?.[800],
+        color,
         background,
         ...style,
       },

@@ -12,6 +12,11 @@ export type DividerProps = {
   variant?: "solid" | "dashed";
 } & React.HTMLAttributes<HTMLHRElement>;
 
+export type SpacingProps = {
+  orientation?: "horizontal" | "vertical";
+  size?: number;
+} & React.HTMLAttributes<HTMLDivElement>;
+
 export type FlexProps = {
   align?: CSSProperties["alignItems"];
   basis?: CSSProperties["flexBasis"];
@@ -21,6 +26,7 @@ export type FlexProps = {
   shrink?: CSSProperties["flexShrink"];
   wrap?: CSSProperties["flexWrap"];
   gap?: CSSProperties["gap"];
+  display?: CSSProperties["display"];
 } & BoxProps;
 
 export type GridProps = {

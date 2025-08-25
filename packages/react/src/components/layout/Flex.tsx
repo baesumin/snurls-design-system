@@ -26,6 +26,7 @@ const Flex = (props: Props): ReactElement => {
     wrap,
     gap,
     shrink,
+    display = "flex",
   } = props;
 
   return createElement(
@@ -41,7 +42,7 @@ const Flex = (props: Props): ReactElement => {
         className,
       ]),
       style: {
-        display: "flex",
+        display,
         alignItems: align,
         justifyContent: justify,
         flexDirection: direction,
