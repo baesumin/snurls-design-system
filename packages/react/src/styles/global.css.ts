@@ -2,14 +2,6 @@ import { globalFontFace, globalStyle } from "@vanilla-extract/css";
 
 const suit = "SUIT";
 
-// import한 폰트 경로를 사용하여 @font-face 규칙을 정의합니다.
-globalFontFace(suit, {
-  src: `url("../assets/fonts/SUIT-ExtraBold.woff2") format('woff2')`,
-  fontWeight: 800, // ExtraBold
-  fontStyle: "normal",
-  fontDisplay: "swap",
-});
-
 globalFontFace(suit, {
   src: `url("../assets/fonts/SUIT-Bold.woff2") format('woff2')`,
   fontWeight: 700, // Bold

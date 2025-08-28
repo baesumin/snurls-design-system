@@ -6,7 +6,7 @@ export const color = {
 export const primary = {
   100: "#F4F0FF",
   200: "#A050FA",
-  300: "#DBBFF0",
+  300: "#906BFF",
   400: "#753AFF",
   500: "#462399",
 };
