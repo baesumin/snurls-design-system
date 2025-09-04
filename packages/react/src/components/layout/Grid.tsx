@@ -27,12 +27,13 @@ const Grid = (props: Props): ReactElement => {
     templateColumns,
     templateRows,
     templateAreas,
+    ...nativeProps
   } = props;
 
   return createElement(
     as,
     {
-      ...props,
+      ...nativeProps,
       ref,
       className: clsx([
         BaseStyle,

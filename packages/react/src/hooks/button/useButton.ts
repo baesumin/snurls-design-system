@@ -8,6 +8,7 @@ const useButton: OverloadedButtonFunction = (props: any): any => {
     tabIndex,
     onKeyDown,
     type = "button",
+    ...nativeProps
   } = props;
 
   const disabled = isDisabled || isLoading;
@@ -39,7 +40,7 @@ const useButton: OverloadedButtonFunction = (props: any): any => {
   };
 
   const baseProps = {
-    ...props,
+    ...nativeProps,
     "data-loading": isLoading,
     tabIndex: disabled ? undefined : (tabIndex ?? 0),
     onKeyDown: handleKeyDown,

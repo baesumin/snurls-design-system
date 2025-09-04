@@ -23,6 +23,7 @@ const GridItem = (props: Props): ReactElement => {
     rowEnd,
     rowStart,
     rowSpan,
+    ...nativeProps
   } = props;
 
   const style = {
@@ -57,7 +58,7 @@ const GridItem = (props: Props): ReactElement => {
   return createElement(
     as,
     {
-      ...props,
+      ...nativeProps,
       ref,
       className: clsx([
         BaseStyle,
