@@ -13,7 +13,6 @@ const Flex = (props: Props): ReactElement => {
   const {
     as = "div",
     color,
-    background,
     ref,
     className,
     style,
@@ -27,18 +26,23 @@ const Flex = (props: Props): ReactElement => {
     gap,
     shrink,
     display = "flex",
+    width,
+    backgroundColor,
+    margin,
+    padding,
+    ...nativeProps
   } = props;
 
   return createElement(
     as,
     {
-      ...props,
+      ...nativeProps,
       ref,
       className: clsx([
         BaseStyle,
-        StyleSprinkles(
-          extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
-        ),
+        // StyleSprinkles(
+        //   extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
+        // ),
         className,
       ]),
       style: {
@@ -52,7 +56,10 @@ const Flex = (props: Props): ReactElement => {
         flexBasis: basis,
         gap,
         color: color && vars.colors.$scale?.["gray"]?.[800],
-        background,
+        backgroundColor,
+        width,
+        margin,
+        padding,
         ...style,
       },
     },

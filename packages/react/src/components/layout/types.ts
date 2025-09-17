@@ -27,7 +27,11 @@ export type FlexProps = {
   wrap?: CSSProperties["flexWrap"];
   gap?: CSSProperties["gap"];
   display?: CSSProperties["display"];
-} & BoxProps;
+  width?: CSSProperties["width"];
+  backgroundColor?: CSSProperties["backgroundColor"];
+  margin?: CSSProperties["margin"];
+  padding?: CSSProperties["padding"];
+} & AsElementProps;
 
 export type GridProps = {
   autoColumns?: CSSProperties["gridAutoColumns"];
@@ -41,7 +45,11 @@ export type GridProps = {
   templateAreas?: CSSProperties["gridTemplateAreas"];
   templateColumns?: CSSProperties["gridTemplateColumns"];
   templateRows?: CSSProperties["gridTemplateRows"];
-} & BoxProps;
+  width?: CSSProperties["width"];
+  backgroundColor?: CSSProperties["backgroundColor"];
+  margin?: CSSProperties["margin"];
+  padding?: CSSProperties["padding"];
+} & AsElementProps;
 
 export type GridItemProps = {
   area?: CSSProperties["gridArea"];

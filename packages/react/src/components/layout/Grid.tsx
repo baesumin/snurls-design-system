@@ -14,7 +14,6 @@ const Grid = (props: Props): ReactElement => {
     ref,
     as = "div",
     color,
-    background,
     children,
     autoColumns,
     autoFlow,
@@ -27,6 +26,10 @@ const Grid = (props: Props): ReactElement => {
     templateColumns,
     templateRows,
     templateAreas,
+    width,
+    backgroundColor,
+    margin,
+    padding,
     ...nativeProps
   } = props;
 
@@ -37,9 +40,9 @@ const Grid = (props: Props): ReactElement => {
       ref,
       className: clsx([
         BaseStyle,
-        StyleSprinkles(
-          extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
-        ),
+        // StyleSprinkles(
+        //   extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
+        // ),
         props.className,
       ]),
       style: {
@@ -56,7 +59,10 @@ const Grid = (props: Props): ReactElement => {
         gridColumn: column,
         gridRow: row,
         color: color && vars.colors.$scale?.["gray"]?.[800],
-        background,
+        backgroundColor,
+        width,
+        margin,
+        padding,
         ...props.style,
       },
     },

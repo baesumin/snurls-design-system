@@ -18,14 +18,10 @@ type Story = StoryObj<FlexProps>;
 export const FlexStory: Story = {
   args: {
     as: "div",
-    padding: 5,
-    background: "pink",
-    boxShadow: "xl",
-    borderRadius: "md",
+    padding: 10,
+    backgroundColor: "pink",
     justify: "space-between",
-    style: {
-      width: "300px",
-    },
+    width: 200,
   },
   render: (args) => (
     <Flex {...args}>
