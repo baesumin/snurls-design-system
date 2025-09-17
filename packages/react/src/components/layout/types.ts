@@ -30,7 +30,15 @@ export type FlexProps = {
   width?: CSSProperties["width"];
   backgroundColor?: CSSProperties["backgroundColor"];
   margin?: CSSProperties["margin"];
+  marginLeft?: CSSProperties["marginLeft"];
+  marginRight?: CSSProperties["marginRight"];
+  marginBottom?: CSSProperties["marginBottom"];
+  marginTop?: CSSProperties["marginTop"];
   padding?: CSSProperties["padding"];
+  paddingTop?: CSSProperties["paddingTop"];
+  paddingBottom?: CSSProperties["paddingBottom"];
+  paddingLeft?: CSSProperties["paddingLeft"];
+  paddingRight?: CSSProperties["paddingRight"];
 } & AsElementProps;
 
 export type GridProps = {
@@ -48,7 +56,15 @@ export type GridProps = {
   width?: CSSProperties["width"];
   backgroundColor?: CSSProperties["backgroundColor"];
   margin?: CSSProperties["margin"];
+  marginLeft?: CSSProperties["marginLeft"];
+  marginRight?: CSSProperties["marginRight"];
+  marginBottom?: CSSProperties["marginBottom"];
+  marginTop?: CSSProperties["marginTop"];
   padding?: CSSProperties["padding"];
+  paddingTop?: CSSProperties["paddingTop"];
+  paddingBottom?: CSSProperties["paddingBottom"];
+  paddingLeft?: CSSProperties["paddingLeft"];
+  paddingRight?: CSSProperties["paddingRight"];
 } & AsElementProps;
 
 export type GridItemProps = {
