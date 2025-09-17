@@ -1,6 +1,6 @@
 import { classes } from "@snurls/themes";
 import { AsElementProps, StyleProps } from "../core/types";
-import { CSSProperties } from "@vanilla-extract/css";
+import type { CSSProperties } from "react";
 
 export type TextProps = AsElementProps &
   StyleProps & {

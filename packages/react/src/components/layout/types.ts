@@ -1,7 +1,7 @@
 import { vars } from "@snurls/themes";
 import { AsElementProps, StyleProps } from "../core/types";
-import { CSSProperties } from "@vanilla-extract/css";
 import { TextProps } from "../typography";
+import type { CSSProperties } from "react";
 
 export type BoxProps = AsElementProps & StyleProps;
 
