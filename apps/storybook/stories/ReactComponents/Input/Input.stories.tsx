@@ -2,7 +2,7 @@ import "@snurls/react/style.css";
 import { Input, InputProps } from "@snurls/react";
 import { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Input> = {
+const meta: Meta<InputProps> = {
   title: "React Components/Input",
   component: Input,
   parameters: {
@@ -13,6 +13,8 @@ const meta: Meta<typeof Input> = {
     error: { control: "boolean" },
     disabled: { control: "boolean" },
     placeholder: { control: "text" },
+    isMultiLine: { control: "boolean" },
+    height: { control: "number" },
   },
   decorators: [
     (Story) => (

@@ -7,4 +7,6 @@ export type InputProps = Omit<
   disabled?: boolean;
   onChange?: (v: string) => void;
   placeholder?: string;
+  isMultiLine?: boolean;
+  height?: number;
 };

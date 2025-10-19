@@ -21,7 +21,8 @@ const Button = (props: Props) => {
   const {
     variant = "solid",
     size = "56",
-    color = "",
+    backgroundColor,
+    color,
     width,
     leftIcon,
     rightIcon,
@@ -58,7 +59,8 @@ const Button = (props: Props) => {
           [activeColorVariant]: activeColor,
           [borderColorVariant]: borderColor,
         }),
-        background: color,
+        backgroundColor,
+        color,
         width,
         ...style,
       }}

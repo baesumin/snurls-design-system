@@ -3,7 +3,7 @@ import * as styles from "./style.css";
 import { InputProps } from "./types";
 
 interface Props extends InputProps {
-  ref?: React.Ref<HTMLInputElement>;
+  ref?: React.Ref<HTMLInputElement | HTMLTextAreaElement>;
 }
 
 const Input = ({
@@ -12,6 +12,8 @@ const Input = ({
   disabled = false,
   onChange,
   placeholder,
+  isMultiLine = false,
+  height,
   ref,
 }: Props) => {
   const [focused, setFocused] = useState(false);
@@ -24,7 +26,9 @@ const Input = ({
   };
 
   // 입력값 변경
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setValue(e.target.value);
     onChange?.(e.target.value);
   };
@@ -35,19 +39,43 @@ const Input = ({
   else if (disabled) inputClass = `${inputClass} ${styles.inputDisabled}`;
   else if (focused) inputClass = `${inputClass} ${styles.inputFocus}`;
 
+  // 공통 props
+  const commonProps = {
+    className: inputClass,
+    value,
+    onChange: handleChange,
+    placeholder,
+    disabled,
+    onFocus: () => setFocused(true),
+    onBlur: () => setFocused(false),
+    style: {
+      paddingTop: 12,
+      paddingBottom: 12,
+      paddingLeft: 20,
+      paddingRight: isMultiLine ? 20 : 52,
+      height,
+      ...(isMultiLine && {
+        resize: "none" as const,
+        overflow: "hidden" as const,
+      }),
+    },
+  };
+
   return (
     <div className={styles.wrapper}>
-      <input
-        ref={ref}
-        className={inputClass}
-        value={value}
-        onChange={handleChange}
-        placeholder={placeholder}
-        disabled={disabled}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-      />
-      {value && !disabled && (
+      {isMultiLine ? (
+        <textarea
+          ref={ref as React.Ref<HTMLTextAreaElement>}
+          {...commonProps}
+        />
+      ) : (
+        <input
+          ref={ref as React.Ref<HTMLInputElement>}
+          type="text"
+          {...commonProps}
+        />
+      )}
+      {value && !disabled && !isMultiLine && (
         <button
           className={styles.clearBtn}
           onClick={handleClear}

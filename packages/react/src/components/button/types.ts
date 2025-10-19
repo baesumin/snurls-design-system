@@ -1,7 +1,6 @@
-import { vars } from "@snurls/themes";
-
 export type ButtonProps = {
-  color?: keyof typeof vars.colors.$scale;
+  color?: string;
+  backgroundColor?: string;
   isDisabled?: boolean;
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
