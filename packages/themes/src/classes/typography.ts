@@ -38,12 +38,12 @@ export const text = {
   },
   headline1: {
     fontSize: typography.fontSize[18],
-    fontWeight: typography.fontWeight[600],
+    fontWeight: typography.fontWeight[800],
     lineHeight: typography.lineHeight[25],
   },
   headline2: {
     fontSize: typography.fontSize[17],
-    fontWeight: typography.fontWeight[600],
+    fontWeight: typography.fontWeight[800],
     lineHeight: typography.lineHeight[23],
   },
   body1: {
