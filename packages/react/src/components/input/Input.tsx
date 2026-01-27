@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import * as styles from "./style.css";
 import { InputProps } from "./types";
 
@@ -18,6 +18,12 @@ const Input = ({
 }: Props) => {
   const [focused, setFocused] = useState(false);
   const [value, setValue] = useState(propValue);
+
+  useEffect(() => {
+    if (propValue !== value) {
+      setValue(propValue);
+    }
+  }, [propValue]);
 
   // 엑스 아이콘 클릭 → 값 삭제
   const handleClear = () => {

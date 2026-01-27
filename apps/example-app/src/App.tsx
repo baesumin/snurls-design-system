@@ -1,6 +1,9 @@
-import { Flex, Text } from "@snurls/react";
+import { useState } from "react";
+import { Flex, Input, Text } from "@snurls/react";
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <>
       <Text variant="display1">안녕</Text>
@@ -11,6 +14,19 @@ function App() {
       <Flex padding={20} backgroundColor={"pink"}>
         안녕
       </Flex>
+
+      {/* 기본 Input */}
+      <Input
+        value={inputValue}
+        onChange={(val) => setInputValue(val)}
+        placeholder="기본 입력창"
+      />
+
+      <button onClick={() => setInputValue("버튼으로 변경된 값")}>
+        Input 값 변경하기
+      </button>
+
+      <p>현재 state 값: {inputValue}</p>
     </>
   );
 }
