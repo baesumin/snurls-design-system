@@ -1,6 +1,6 @@
 {
   "name": "@snurls/react",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "type": "module",
   "main": "dist/index.js",
   "exports": {
@@ -46,10 +46,10 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "@snurls/themes": "workspace:*",
     "react": "^19.1.0"
   },
   "dependencies": {
+    "@snurls/themes": "^0.0.4",
     "clsx": "^2.1.1"
   }
 }
