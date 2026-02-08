@@ -8,6 +8,14 @@ const useButton: OverloadedButtonFunction = (props: any): any => {
     tabIndex,
     onKeyDown,
     type = "button",
+    // DOM에 전달되면 안 되는 커스텀 props 제외
+    leftIcon,
+    rightIcon,
+    variant,
+    size,
+    backgroundColor,
+    color,
+    width,
     ...nativeProps
   } = props;
 

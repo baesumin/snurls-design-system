@@ -8,7 +8,7 @@ export const wrapper = style({
 });
 
 export const input = style({
-  fontFamily: "SUIT, sans-serif",
+  fontFamily: "Pretendard, sans-serif",
   fontSize: "15px",
   padding: "0 44px 0 20px",
   boxSizing: "border-box",

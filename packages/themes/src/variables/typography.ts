@@ -42,5 +42,5 @@ export const lineHeight = {
 };
 
 export const fontFamily = {
-  suit: "SUIT, sans-serif",
+  pretendard: "Pretendard, sans-serif",
 } as const;

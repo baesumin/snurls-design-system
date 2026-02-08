@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Input, Text } from "@snurls/react";
+import { Button, Flex, Input, Text } from "@snurls/react";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -21,6 +21,8 @@ function App() {
         onChange={(val) => setInputValue(val)}
         placeholder="기본 입력창"
       />
+
+      <Button leftIcon={<>hi</>}>hi</Button>
 
       <button onClick={() => setInputValue("버튼으로 변경된 값")}>
         Input 값 변경하기
